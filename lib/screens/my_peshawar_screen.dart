@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:sbbwu_google_maps/screens/city_search_screen.dart';
 
 class MyPeshawarScreen extends StatefulWidget {
   const MyPeshawarScreen({super.key});
@@ -38,6 +39,14 @@ class _MyPeshawarScreenState extends State<MyPeshawarScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Peshawar on Map'),
+        actions: [
+          IconButton(onPressed: (){
+            Navigator.of(context).push(MaterialPageRoute(builder: (context){
+              return const CitySearchScreen();
+            }));
+
+          }, icon: const Icon(Icons.search))
+        ],
       ),
       body: GoogleMap(
         mapType: MapType.terrain,
