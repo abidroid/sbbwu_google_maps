@@ -3,6 +3,10 @@
         android:label="sbbwu_google_maps"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCNzxkMNNGAM9w8Edx9qzjkHq4h50VsChY"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
